@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://iqrvgbqig3kv"]
+
+[ext_resource type="PackedScene" uid="uid://b5uf6u87m82qp" path="res://xhb.tscn" id="1_4flbx"]
+
+[node name="Player" type="Node2D" unique_id=1559910079]
+
+[node name="PlaceholderText" type="RichTextLabel" parent="." unique_id=1010539651]
+offset_left = -21.0
+offset_right = 19.0
+offset_bottom = 40.0
+text = "hello"
+
+[node name="EffectText" type="RichTextLabel" parent="." unique_id=1109800399]
+offset_left = -152.0
+offset_top = 24.0
+offset_right = 160.0
+offset_bottom = 64.0
+
+[node name="XHB" parent="." unique_id=944958357 instance=ExtResource("1_4flbx")]
+offset_left = -322.0
+offset_top = 83.0
+offset_right = -322.0
+offset_bottom = 83.0

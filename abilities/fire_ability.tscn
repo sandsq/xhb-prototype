@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ddhgetix8hwyg"]
+
+[ext_resource type="PackedScene" uid="uid://c2u44c4ltnc6o" path="res://abilities/ability.tscn" id="1_nnf0t"]
+[ext_resource type="Script" uid="uid://y8sj2rf86oq7" path="res://abilities/fire_ability.gd" id="2_y0fwp"]
+[ext_resource type="Resource" uid="uid://11qaw7mf53a7" path="res://fire_data.tres" id="3_r8q6d"]
+[ext_resource type="Script" uid="uid://d1br2p4kbb3lb" path="res://activation_effect_fire.gd" id="4_k42of"]
+
+[sub_resource type="Resource" id="Resource_r8q6d"]
+script = ExtResource("4_k42of")
+metadata/_custom_type_script = "uid://d1br2p4kbb3lb"
+
+[node name="FireAbility" unique_id=1464958380 instance=ExtResource("1_nnf0t")]
+script = ExtResource("2_y0fwp")
+ability_data = ExtResource("3_r8q6d")
+activation_effect = SubResource("Resource_r8q6d")
+
+[node name="AbilityGraphic" parent="." index="0" unique_id=1791107964]
+color = Color(0.8194662, 0.4097299, 0.35667548, 1)

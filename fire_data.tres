@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://11qaw7mf53a7"]
+
+[ext_resource type="Script" uid="uid://v8o1lnjg2tis" path="res://ability_data.gd" id="1_8kphb"]
+
+[resource]
+script = ExtResource("1_8kphb")
+text = "Fire"
+color = Color(0.61275214, 0.34465113, 0.30102617, 1)
+metadata/_custom_type_script = "uid://v8o1lnjg2tis"

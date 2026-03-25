@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dpndfsuexd8uv"]
+
+[ext_resource type="PackedScene" uid="uid://bthecxjfttn0q" path="res://xhb_flower.tscn" id="1_23agu"]
+
+[node name="XHBHalf" type="Control" unique_id=1489506263]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 120.0
+
+[node name="XHBFlowerLeft" parent="." unique_id=13512865 instance=ExtResource("1_23agu")]
+layout_mode = 0
+
+[node name="XHBFlowerRight" parent="." unique_id=1410607626 instance=ExtResource("1_23agu")]
+layout_mode = 0
+offset_left = 136.0
+offset_right = 256.0
+
+[node name="LabelUp" parent="XHBFlowerRight/SingleAbilityUp" parent_id_path=PackedInt32Array(1410607626, 1391659758) index="2" unique_id=28014368]
+text = "x"
+
+[node name="LabelRight" parent="XHBFlowerRight/SingleAbilityRight" parent_id_path=PackedInt32Array(1410607626, 934725722) index="2" unique_id=1909674972]
+text = "a"
+
+[node name="LabelDown" parent="XHBFlowerRight/SingleAbilityDown" parent_id_path=PackedInt32Array(1410607626, 30343802) index="2" unique_id=1623895950]
+text = "b"
+
+[node name="LabelLeft" parent="XHBFlowerRight/SingleAbilityLeft" parent_id_path=PackedInt32Array(1410607626, 671366253) index="2" unique_id=872690276]
+text = "y
+"
+
+[editable path="XHBFlowerRight"]

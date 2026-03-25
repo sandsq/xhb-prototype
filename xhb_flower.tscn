@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bthecxjfttn0q"]
+
+[ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://single_ability_slot.tscn" id="1_ok5h4"]
+
+[node name="XHBFlower" type="Control" unique_id=13512865]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 120.0
+offset_bottom = 120.0
+
+[node name="SingleAbilityUp" parent="." unique_id=1391659758 instance=ExtResource("1_ok5h4")]
+layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+
+[node name="LabelUp" type="RichTextLabel" parent="SingleAbilityUp" unique_id=28014368]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 36.0
+offset_right = 27.0
+offset_bottom = 52.0
+theme_override_font_sizes/normal_font_size = 8
+text = "u"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SingleAbilityRight" parent="." unique_id=934725722 instance=ExtResource("1_ok5h4")]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 80.0
+
+[node name="LabelRight" type="RichTextLabel" parent="SingleAbilityRight" unique_id=1909674972]
+layout_mode = 0
+offset_left = -12.0
+offset_top = 11.0
+offset_right = 4.0
+offset_bottom = 27.0
+theme_override_font_sizes/normal_font_size = 8
+text = "r"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SingleAbilityDown" parent="." unique_id=30343802 instance=ExtResource("1_ok5h4")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 80.0
+offset_bottom = 120.0
+
+[node name="LabelDown" type="RichTextLabel" parent="SingleAbilityDown" unique_id=1623895950]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -13.0
+offset_right = 27.0
+offset_bottom = 3.0
+theme_override_font_sizes/normal_font_size = 8
+text = "d"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SingleAbilityLeft" parent="." unique_id=671366253 instance=ExtResource("1_ok5h4")]
+layout_mode = 0
+offset_top = 40.0
+offset_bottom = 80.0
+
+[node name="LabelLeft" type="RichTextLabel" parent="SingleAbilityLeft" unique_id=872690276]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 12.0
+offset_right = 53.0
+offset_bottom = 28.0
+theme_override_font_sizes/normal_font_size = 8
+text = "l"
+horizontal_alignment = 1
+vertical_alignment = 1

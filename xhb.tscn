@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b5uf6u87m82qp"]
+
+[ext_resource type="PackedScene" uid="uid://dpndfsuexd8uv" path="res://xhb_half.tscn" id="1_7rwek"]
+
+[node name="XHB" type="Control" unique_id=944958357]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="XHBHalfLeft" parent="." unique_id=1489506263 instance=ExtResource("1_7rwek")]
+layout_mode = 0
+
+[node name="XHBHalfRight" parent="." unique_id=216015551 instance=ExtResource("1_7rwek")]
+layout_mode = 0
+offset_left = 384.0
+offset_right = 640.0
