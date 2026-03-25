@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://c1eepf2babr8a"]
+
+[ext_resource type="Resource" uid="uid://dpvphqdp4uaym" path="res://abilities/water_ability_data.tres" id="1_5o558"]
+[ext_resource type="Script" uid="uid://d0it4fnvvdj2p" path="res://abilities/ability.gd" id="1_windw"]
+[ext_resource type="Script" uid="uid://dr32iyvsya8bu" path="res://abilities/water_ability_effect.gd" id="2_nmaak"]
+
+[sub_resource type="Resource" id="Resource_e88fl"]
+script = ExtResource("2_nmaak")
+metadata/_custom_type_script = "uid://dr32iyvsya8bu"
+
+[resource]
+script = ExtResource("1_windw")
+ability_data = ExtResource("1_5o558")
+ability_effect = SubResource("Resource_e88fl")
+metadata/_custom_type_script = "uid://d0it4fnvvdj2p"

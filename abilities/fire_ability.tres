@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://b38mqvlumgdln"]
+
+[ext_resource type="Script" uid="uid://d0it4fnvvdj2p" path="res://abilities/ability.gd" id="1_jigka"]
+[ext_resource type="Resource" uid="uid://bm72rvhcdynai" path="res://abilities/fire_ability_data.tres" id="1_mbp27"]
+[ext_resource type="Script" uid="uid://cmjgid8s0boa6" path="res://abilities/fire_ability_effect.gd" id="2_7lsyd"]
+
+[sub_resource type="Resource" id="Resource_jytur"]
+script = ExtResource("2_7lsyd")
+metadata/_custom_type_script = "uid://cmjgid8s0boa6"
+
+[resource]
+script = ExtResource("1_jigka")
+ability_data = ExtResource("1_mbp27")
+ability_effect = SubResource("Resource_jytur")
+metadata/_custom_type_script = "uid://d0it4fnvvdj2p"

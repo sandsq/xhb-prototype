@@ -1,13 +1,7 @@
-class_name Ability extends Node2D
+class_name Ability extends Resource
 
 @export var ability_data: AbilityData
-
-@onready var ability_graphic = $AbilityGraphic
-
-func _ready() -> void:
-	if ability_data == null:
-		print("no ability data assigned to this ability")
-	ability_graphic.color = ability_data.color
+@export var ability_effect: AbilityEffect
 
 func activate(source: CharacterBody2D, target: RichTextLabel):
-	ability_data.activate(source, target)
+	ability_effect.activate(ability_data, source, target)

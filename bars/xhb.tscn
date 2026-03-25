@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b5uf6u87m82qp"]
+
+[ext_resource type="PackedScene" uid="uid://dpndfsuexd8uv" path="res://bars/xhb_half.tscn" id="1_7rwek"]
+[ext_resource type="Script" uid="uid://ds4jaspxdokcr" path="res://bars/xhb.gd" id="1_32tct"]
+[ext_resource type="Resource" uid="uid://b38mqvlumgdln" path="res://abilities/fire_ability.tres" id="3_erpuq"]
+[ext_resource type="Resource" uid="uid://c1eepf2babr8a" path="res://abilities/water_ability.tres" id="4_07tuc"]
+
+[node name="XHB" type="Control" unique_id=944958357]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_32tct")
+
+[node name="Left" parent="." unique_id=512955834 instance=ExtResource("1_7rwek")]
+layout_mode = 0
+
+[node name="SingleAbilitySlot5" parent="Left" index="4" unique_id=198440863]
+ability = ExtResource("3_erpuq")
+
+[node name="Right" parent="." unique_id=1208426016 instance=ExtResource("1_7rwek")]
+layout_mode = 0
+offset_left = 280.0
+offset_right = 528.0
+pivot_offset_ratio = Vector2(0, 1)
+
+[node name="SingleAbilitySlot6" parent="Right" index="5" unique_id=1543123028]
+ability = ExtResource("4_07tuc")
+
+[editable path="Left"]
+[editable path="Right"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bthecxjfttn0q"]
 
-[ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://single_ability_slot.tscn" id="1_ok5h4"]
+[ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://bars/single_ability_slot.tscn" id="1_ok5h4"]
 
 [node name="XHBFlower" type="Control" unique_id=13512865]
 layout_mode = 3

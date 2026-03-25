@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="AbilityData" format=3 uid="uid://dpvphqdp4uaym"]
+
+[ext_resource type="Script" uid="uid://v8o1lnjg2tis" path="res://abilities/ability_data.gd" id="1_xwxl7"]
+
+[resource]
+script = ExtResource("1_xwxl7")
+name = "Water"
+color = Color(0.20668572, 0.3323142, 0.7269197, 1)
+metadata/_custom_type_script = "uid://v8o1lnjg2tis"

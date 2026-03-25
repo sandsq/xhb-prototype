@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dq2mjsfqau5do"]
 
-[ext_resource type="Script" uid="uid://5e2cqacoh0yg" path="res://single_ability_slot.gd" id="1_15io5"]
+[ext_resource type="Script" uid="uid://5e2cqacoh0yg" path="res://bars/single_ability_slot.gd" id="1_15io5"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_15io5"]
 
@@ -19,8 +19,6 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.13499999, 0.25, 0.16758333, 1)
 
-[node name="Slot" type="Node2D" parent="." unique_id=1295410975]
-
 [node name="Label" type="RichTextLabel" parent="." unique_id=812741384]
 layout_mode = 0
 offset_left = 8.0
@@ -29,3 +27,12 @@ offset_right = 32.0
 offset_bottom = 57.0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AbilityRenderer" type="Node2D" parent="." unique_id=495870885]
+
+[node name="AbilityColor" type="ColorRect" parent="AbilityRenderer" unique_id=1276457009]
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 35.0
+offset_bottom = 35.0
+color = Color(1, 1, 1, 0)

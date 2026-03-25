@@ -4,20 +4,18 @@ signal slot_hotkey_pressed(ability)
 
 @export var hotkey: InputEvent
 @export var hotkey_label: String
-@export var AbilityScene: PackedScene
+@export var ability: Ability
 
-var ability
 var is_enabled: bool = false
 
-@onready var slot = $Slot
 @onready var label = $Label
-
+@onready var ability_color = $AbilityRenderer/AbilityColor
 
 func _ready() -> void:
-	if AbilityScene != null:
-		ability = AbilityScene.instantiate()
-		slot.add_child(ability)
 	label.text = hotkey_label
+	if ability != null:
+		ability_color.color = ability.ability_data.color
+		
 
 
 func _process(delta: float) -> void:
