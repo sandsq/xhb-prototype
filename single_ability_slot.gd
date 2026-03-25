@@ -1,21 +1,29 @@
 class_name SingleAbilitySlot extends Control
 
 @export var hotkey: InputEvent
+@export var hotkey_label: String
+@export var AbilityScene: PackedScene
 
-var ability: Ability
+var ability
 
 @onready var slot = $Slot
+@onready var label = $Label
 
 
 func _ready() -> void:
-	ability = slot.get_child(0)
+	if AbilityScene != null:
+		ability = AbilityScene.instantiate()
+		slot.add_child(ability)
+	label.text = hotkey_label
 
 
 func _process(delta: float) -> void:
+
 	# probably don't actually do this here, just store the hotkey with the slot though
 	if Input.is_action_just_pressed(hotkey.action):
 		print("just pressed %s" % hotkey.action)
-		ability.activation_effect.activate(self, self)
+		if ability != null:
+			ability.activation_effect.activate(self, self)
 
 #
 #func activate(source, target) -> void:

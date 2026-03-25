@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://dq2mjsfqau5do"]
 
 [ext_resource type="Script" uid="uid://5e2cqacoh0yg" path="res://single_ability_slot.gd" id="1_15io5"]
-[ext_resource type="PackedScene" uid="uid://ddhgetix8hwyg" path="res://abilities/fire_ability.tscn" id="2_xpc7o"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_15io5"]
-action = &"pad_up"
 
 [node name="SingleAbilitySlot" type="Control" unique_id=1391659758]
 layout_mode = 3
@@ -13,6 +11,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_15io5")
 hotkey = SubResource("InputEventAction_15io5")
+hotkey_label = "u"
 
 [node name="Background" type="ColorRect" parent="." unique_id=426968959]
 layout_mode = 0
@@ -22,4 +21,11 @@ color = Color(0.13499999, 0.25, 0.16758333, 1)
 
 [node name="Slot" type="Node2D" parent="." unique_id=1295410975]
 
-[node name="FireAbility" parent="Slot" unique_id=1464958380 instance=ExtResource("2_xpc7o")]
+[node name="Label" type="RichTextLabel" parent="." unique_id=812741384]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 33.0
+offset_right = 32.0
+offset_bottom = 57.0
+horizontal_alignment = 1
+vertical_alignment = 1
