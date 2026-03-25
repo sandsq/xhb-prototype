@@ -1,174 +1,24 @@
 [gd_scene format=3 uid="uid://b5uf6u87m82qp"]
 
-[ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://single_ability_slot.tscn" id="1_7rwek"]
-[ext_resource type="PackedScene" uid="uid://ddhgetix8hwyg" path="res://abilities/fire_ability.tscn" id="2_bkss6"]
-
-[sub_resource type="InputEventAction" id="InputEventAction_7rwek"]
-action = &"pad_up"
-
-[sub_resource type="InputEventAction" id="InputEventAction_bkss6"]
-action = &"pad_right"
-
-[sub_resource type="InputEventAction" id="InputEventAction_32tct"]
-action = &"pad_down"
-
-[sub_resource type="InputEventAction" id="InputEventAction_ryigr"]
-action = &"pad_left"
-
-[sub_resource type="InputEventAction" id="InputEventAction_0edrb"]
-action = &"face_up"
-
-[sub_resource type="InputEventAction" id="InputEventAction_c44bl"]
-action = &"face_right"
-
-[sub_resource type="InputEventAction" id="InputEventAction_prfb8"]
-action = &"face_down"
-
-[sub_resource type="InputEventAction" id="InputEventAction_htn5t"]
-action = &"face_left"
+[ext_resource type="PackedScene" uid="uid://dpndfsuexd8uv" path="res://xhb_half.tscn" id="1_7rwek"]
+[ext_resource type="Script" uid="uid://ds4jaspxdokcr" path="res://xhb.gd" id="1_32tct"]
+[ext_resource type="PackedScene" uid="uid://dh0cvai5fh1fm" path="res://abilities/water_ability.tscn" id="3_32tct"]
 
 [node name="XHB" type="Control" unique_id=944958357]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_32tct")
 
-[node name="Left" type="Control" parent="." unique_id=1324215700]
-anchors_preset = 0
-offset_right = 248.0
-offset_bottom = 120.0
-
-[node name="SingleAbilitySlot" parent="Left" unique_id=1391659758 instance=ExtResource("1_7rwek")]
+[node name="Left" parent="." unique_id=512955834 instance=ExtResource("1_7rwek")]
 layout_mode = 0
-offset_left = 40.0
-offset_right = 80.0
-hotkey = SubResource("InputEventAction_7rwek")
-AbilityScene = ExtResource("2_bkss6")
 
-[node name="SingleAbilitySlot2" parent="Left" unique_id=216368937 instance=ExtResource("1_7rwek")]
+[node name="Right" parent="." unique_id=1208426016 instance=ExtResource("1_7rwek")]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 40.0
-offset_right = 120.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_bkss6")
-hotkey_label = "r"
+offset_left = 280.0
+offset_right = 528.0
+pivot_offset_ratio = Vector2(0, 1)
 
-[node name="SingleAbilitySlot3" parent="Left" unique_id=180501532 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 80.0
-offset_right = 80.0
-offset_bottom = 120.0
-hotkey = SubResource("InputEventAction_32tct")
-hotkey_label = "d"
+[node name="SingleAbilitySlot" parent="Right" index="0" unique_id=1391659758]
+AbilityScene = ExtResource("3_32tct")
 
-[node name="SingleAbilitySlot4" parent="Left" unique_id=1685740610 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_top = 40.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_ryigr")
-hotkey_label = "l"
-
-[node name="SingleAbilitySlot5" parent="Left" unique_id=753410272 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 168.0
-offset_right = 208.0
-hotkey = SubResource("InputEventAction_0edrb")
-hotkey_label = "x"
-
-[node name="SingleAbilitySlot6" parent="Left" unique_id=341470688 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 208.0
-offset_top = 40.0
-offset_right = 248.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_c44bl")
-hotkey_label = "a"
-
-[node name="SingleAbilitySlot7" parent="Left" unique_id=425416473 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 168.0
-offset_top = 80.0
-offset_right = 208.0
-offset_bottom = 120.0
-hotkey = SubResource("InputEventAction_prfb8")
-hotkey_label = "b"
-
-[node name="SingleAbilitySlot8" parent="Left" unique_id=1884764530 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 40.0
-offset_right = 168.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_htn5t")
-hotkey_label = "y"
-
-[node name="Right" type="Control" parent="." unique_id=1708672758]
-anchors_preset = 0
-offset_left = 296.0
-offset_right = 544.0
-offset_bottom = 120.0
-
-[node name="SingleAbilitySlot" parent="Right" unique_id=357594222 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 40.0
-offset_right = 80.0
-hotkey = SubResource("InputEventAction_7rwek")
-
-[node name="SingleAbilitySlot2" parent="Right" unique_id=9643127 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 80.0
-offset_top = 40.0
-offset_right = 120.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_bkss6")
-hotkey_label = "r"
-
-[node name="SingleAbilitySlot3" parent="Right" unique_id=1168730279 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 40.0
-offset_top = 80.0
-offset_right = 80.0
-offset_bottom = 120.0
-hotkey = SubResource("InputEventAction_32tct")
-hotkey_label = "d"
-
-[node name="SingleAbilitySlot4" parent="Right" unique_id=219997546 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_top = 40.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_ryigr")
-hotkey_label = "l"
-
-[node name="SingleAbilitySlot5" parent="Right" unique_id=290474171 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 168.0
-offset_right = 208.0
-hotkey = SubResource("InputEventAction_0edrb")
-hotkey_label = "x"
-
-[node name="SingleAbilitySlot6" parent="Right" unique_id=55249637 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 208.0
-offset_top = 40.0
-offset_right = 248.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_c44bl")
-hotkey_label = "a"
-
-[node name="SingleAbilitySlot7" parent="Right" unique_id=1488199729 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 168.0
-offset_top = 80.0
-offset_right = 208.0
-offset_bottom = 120.0
-hotkey = SubResource("InputEventAction_prfb8")
-hotkey_label = "b"
-
-[node name="SingleAbilitySlot8" parent="Right" unique_id=882771341 instance=ExtResource("1_7rwek")]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 40.0
-offset_right = 168.0
-offset_bottom = 80.0
-hotkey = SubResource("InputEventAction_htn5t")
-hotkey_label = "y"
+[editable path="Right"]

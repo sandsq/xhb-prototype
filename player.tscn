@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://iqrvgbqig3kv"]
 
 [ext_resource type="PackedScene" uid="uid://b5uf6u87m82qp" path="res://xhb.tscn" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://by1238co2lpd1" path="res://player.gd" id="1_onrkg"]
 
-[node name="Player" type="Node2D" unique_id=1559910079]
+[node name="Player" type="CharacterBody2D" unique_id=525354585]
+script = ExtResource("1_onrkg")
 
 [node name="PlaceholderText" type="RichTextLabel" parent="." unique_id=1010539651]
 offset_left = -21.0
@@ -17,9 +19,4 @@ offset_right = 160.0
 offset_bottom = 64.0
 
 [node name="XHB" parent="." unique_id=944958357 instance=ExtResource("1_4flbx")]
-offset_left = -272.0
-offset_top = 88.0
-offset_right = -272.0
-offset_bottom = 88.0
-
-[editable path="XHB"]
+top_level = true

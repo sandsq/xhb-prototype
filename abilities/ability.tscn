@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c2u44c4ltnc6o"]
+[gd_scene format=3 uid="uid://b1uxs42pujsuv"]
 
 [ext_resource type="Script" uid="uid://d0it4fnvvdj2p" path="res://abilities/ability.gd" id="1_vw4y3"]
 [ext_resource type="Script" uid="uid://v8o1lnjg2tis" path="res://ability_data.gd" id="2_uqonq"]

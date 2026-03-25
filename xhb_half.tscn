@@ -1,32 +1,103 @@
 [gd_scene format=3 uid="uid://dpndfsuexd8uv"]
 
-[ext_resource type="PackedScene" uid="uid://bthecxjfttn0q" path="res://xhb_flower.tscn" id="1_23agu"]
+[ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://single_ability_slot.tscn" id="1_5jskt"]
+[ext_resource type="Script" uid="uid://bsl2he3uim7fk" path="res://xhb_half.gd" id="1_beh6s"]
+[ext_resource type="PackedScene" uid="uid://ddhgetix8hwyg" path="res://abilities/fire_ability.tscn" id="2_beh6s"]
 
-[node name="XHBHalf" type="Control" unique_id=1489506263]
+[sub_resource type="InputEventAction" id="InputEventAction_7rwek"]
+action = &"pad_up"
+
+[sub_resource type="InputEventAction" id="InputEventAction_bkss6"]
+action = &"pad_right"
+
+[sub_resource type="InputEventAction" id="InputEventAction_32tct"]
+action = &"pad_down"
+
+[sub_resource type="InputEventAction" id="InputEventAction_ryigr"]
+action = &"pad_left"
+
+[sub_resource type="InputEventAction" id="InputEventAction_0edrb"]
+action = &"face_up"
+
+[sub_resource type="InputEventAction" id="InputEventAction_c44bl"]
+action = &"face_right"
+
+[sub_resource type="InputEventAction" id="InputEventAction_prfb8"]
+action = &"face_down"
+
+[sub_resource type="InputEventAction" id="InputEventAction_htn5t"]
+action = &"face_left"
+
+[node name="XHBHalf" type="Control" unique_id=512955834]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 256.0
+offset_right = 248.0
 offset_bottom = 120.0
+pivot_offset_ratio = Vector2(1, 1)
+script = ExtResource("1_beh6s")
 
-[node name="XHBFlowerLeft" parent="." unique_id=13512865 instance=ExtResource("1_23agu")]
+[node name="SingleAbilitySlot" parent="." unique_id=1391659758 instance=ExtResource("1_5jskt")]
 layout_mode = 0
+offset_left = 40.0
+offset_right = 80.0
+hotkey = SubResource("InputEventAction_7rwek")
+AbilityScene = ExtResource("2_beh6s")
 
-[node name="XHBFlowerRight" parent="." unique_id=1410607626 instance=ExtResource("1_23agu")]
+[node name="SingleAbilitySlot2" parent="." unique_id=1770922323 instance=ExtResource("1_5jskt")]
 layout_mode = 0
-offset_left = 136.0
-offset_right = 256.0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 120.0
+offset_bottom = 80.0
+hotkey = SubResource("InputEventAction_bkss6")
+hotkey_label = "r"
 
-[node name="LabelUp" parent="XHBFlowerRight/SingleAbilityUp" parent_id_path=PackedInt32Array(1410607626, 1391659758) index="2" unique_id=28014368]
-text = "x"
+[node name="SingleAbilitySlot3" parent="." unique_id=2044704003 instance=ExtResource("1_5jskt")]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 80.0
+offset_right = 80.0
+offset_bottom = 120.0
+hotkey = SubResource("InputEventAction_32tct")
+hotkey_label = "d"
 
-[node name="LabelRight" parent="XHBFlowerRight/SingleAbilityRight" parent_id_path=PackedInt32Array(1410607626, 934725722) index="2" unique_id=1909674972]
-text = "a"
+[node name="SingleAbilitySlot4" parent="." unique_id=127557675 instance=ExtResource("1_5jskt")]
+layout_mode = 0
+offset_top = 40.0
+offset_bottom = 80.0
+hotkey = SubResource("InputEventAction_ryigr")
+hotkey_label = "l"
 
-[node name="LabelDown" parent="XHBFlowerRight/SingleAbilityDown" parent_id_path=PackedInt32Array(1410607626, 30343802) index="2" unique_id=1623895950]
-text = "b"
+[node name="SingleAbilitySlot5" parent="." unique_id=198440863 instance=ExtResource("1_5jskt")]
+layout_mode = 0
+offset_left = 168.0
+offset_right = 208.0
+hotkey = SubResource("InputEventAction_0edrb")
+hotkey_label = "x"
 
-[node name="LabelLeft" parent="XHBFlowerRight/SingleAbilityLeft" parent_id_path=PackedInt32Array(1410607626, 671366253) index="2" unique_id=872690276]
-text = "y
-"
+[node name="SingleAbilitySlot6" parent="." unique_id=1543123028 instance=ExtResource("1_5jskt")]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 40.0
+offset_right = 248.0
+offset_bottom = 80.0
+hotkey = SubResource("InputEventAction_c44bl")
+hotkey_label = "a"
 
-[editable path="XHBFlowerRight"]
+[node name="SingleAbilitySlot7" parent="." unique_id=161573757 instance=ExtResource("1_5jskt")]
+layout_mode = 0
+offset_left = 168.0
+offset_top = 80.0
+offset_right = 208.0
+offset_bottom = 120.0
+hotkey = SubResource("InputEventAction_prfb8")
+hotkey_label = "b"
+
+[node name="SingleAbilitySlot8" parent="." unique_id=1193588422 instance=ExtResource("1_5jskt")]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 40.0
+offset_right = 168.0
+offset_bottom = 80.0
+hotkey = SubResource("InputEventAction_htn5t")
+hotkey_label = "y"

@@ -13,3 +13,23 @@ color = Color(0.3315, 0.51, 0.51, 1)
 
 [node name="Player" parent="." unique_id=1559910079 instance=ExtResource("2_0xm2m")]
 position = Vector2(608, 184)
+
+[node name="XHB" parent="Player" index="2" unique_id=944958357]
+offset_left = 336.0
+offset_top = 520.0
+offset_right = 336.0
+offset_bottom = 520.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1897087129]
+offset_left = 264.0
+offset_top = 112.0
+offset_right = 304.0
+offset_bottom = 152.0
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=464650032]
+offset_left = 1024.0
+offset_top = 512.0
+offset_right = 1064.0
+offset_bottom = 552.0
+
+[editable path="Player"]
