@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ce5aitud7owx6" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://iqrvgbqig3kv" path="res://player.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://c4n0os7j88p6o" path="res://ability_menu.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c46qsa0o6yhb1" path="res://input_viewer.tscn" id="4_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=1575291038]
 script = ExtResource("1_ig7tw")
@@ -34,5 +35,15 @@ offset_right = 1216.0
 offset_bottom = 640.0
 
 [node name="AbilityMenu" parent="." unique_id=1948310713 instance=ExtResource("3_h2yge")]
+offset_left = 64.0
+offset_top = 216.0
+offset_right = 64.0
+offset_bottom = 216.0
+
+[node name="InputViewer" parent="." unique_id=510339616 instance=ExtResource("4_1bvp3")]
+offset_left = 24.0
+offset_top = 512.0
+offset_right = 144.0
+offset_bottom = 576.0
 
 [editable path="Player"]

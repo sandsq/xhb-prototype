@@ -10,7 +10,16 @@
 [node name="XHB" type="Control" unique_id=944958357]
 layout_mode = 3
 anchors_preset = 0
+focus_mode = 2
 script = ExtResource("1_32tct")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1373533693]
+layout_mode = 0
+offset_left = -64.0
+offset_top = -24.0
+offset_right = 592.0
+offset_bottom = 288.0
+pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="Left" parent="." unique_id=512955834 instance=ExtResource("1_7rwek")]
 layout_mode = 0

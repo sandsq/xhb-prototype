@@ -3,24 +3,56 @@ extends Control
 var upscale: float = 1.5
 var currently_active
 var action_queue: Array[InputEvent]
+var control_state: Globals.ControlState:
+	set(value):
+		match value:
+			Globals.ControlState.PLAYER_CONTROL:
+				self.grab_focus()
+				background.color = Color("118855")
+			Globals.ControlState.ABILITY_ASSIGNMENT:
+				self.grab_focus()
+				background.color = Color("11ff88")
+			_:
+				self.release_focus()
+				background.color = Color("ffffff", 0)
+		if currently_active != null and background != null:
+			reset_currently_active_state()
+		control_state = value
+var ability_to_assign: Ability
 
 @onready var left = $Left
 @onready var right = $Right
 @onready var back_left = $BackLeft
 @onready var back_right = $BackRight
+@onready var background = $Background
 
 func _process(_delta: float) -> void:
+	match control_state:
+		Globals.ControlState.PLAYER_CONTROL:
+			process_bar_input()
+		Globals.ControlState.ABILITY_ASSIGNMENT:
+			process_bar_input()
+		_:
+			pass
+
+
+func _gui_input(event: InputEvent) -> void:
+	if event.is_action_pressed("activate_left") or event.is_action_pressed("activate_right"):
+		action_queue.append(event)
+		if action_queue.size() >= 2:
+			action_queue = action_queue.slice(-2, action_queue.size())
+
+func process_bar_input():
 	if Input.is_action_just_released("activate_left"):
 		reset_currently_active_state()
 	elif Input.is_action_just_released("activate_right"):
 		reset_currently_active_state()
 
-	# if both triggers are held, need to check the most recent one
 	if Input.is_action_pressed("activate_left") \
 	and Input.is_action_pressed("activate_right"):
 		if action_queue.size() < 2:
 			print("action queue size is %s which sholudn't be possible" % action_queue.size())
-		
+
 		var last_action = action_queue.back()
 		if last_action.is_action("activate_left"):
 			reset_currently_active_state()
@@ -37,21 +69,15 @@ func _process(_delta: float) -> void:
 	elif Input.is_action_pressed("activate_right") \
 	and !Input.is_action_pressed("activate_left"):
 		currently_active = right
-	
+
 	if currently_active != null:
 		currently_active.scale = Vector2(upscale, upscale)
 		currently_active.set_state(true)
+		background.scale = Vector2(upscale, upscale)
 
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("activate_left") or event.is_action_pressed("activate_right"):
-		#print("%s added" % event)
-		action_queue.append(event)
-		if action_queue.size() >= 2:
-			action_queue = action_queue.slice(-2, action_queue.size())
 
-	
 func reset_currently_active_state():
 	currently_active.scale = Vector2(1.0, 1.0)
 	currently_active.set_state(false)
 	currently_active = null
-	
+	background.scale = Vector2(1.0, 1.0)

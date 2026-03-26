@@ -1,10 +1,15 @@
 class_name SingleAbilitySlot extends Control
 
-signal slot_hotkey_pressed(ability)
+signal slot_hotkey_pressed(ability: Ability, slot: SingleAbilitySlot)
 
 @export var hotkey: InputEvent
 @export var hotkey_label: String
-@export var ability: Ability
+@export var ability: Ability:
+	set(value):
+		if value != null and ability_renderer != null:
+			print("displaying new ability %s" % value)
+			ability_renderer.render(value)
+		ability = value
 
 var is_enabled: bool = false
 
@@ -13,17 +18,14 @@ var is_enabled: bool = false
 
 func _ready() -> void:
 	label.text = hotkey_label
-	if ability != null:
-		ability_renderer.render(ability)
-	
+	ability = ability
 
 
 func _process(_delta: float) -> void:
 	# probably don't actually do this here, just store the hotkey with the slot though
 	if is_enabled and Input.is_action_just_pressed(hotkey.action):
 		print("just pressed %s" % hotkey.action)
-		if ability != null:
-			slot_hotkey_pressed.emit(ability)
+		slot_hotkey_pressed.emit(ability, self)
 			#ability.activation_effect.activate(self, self)
 
 #

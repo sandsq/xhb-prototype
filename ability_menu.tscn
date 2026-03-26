@@ -3,27 +3,43 @@
 [ext_resource type="Script" uid="uid://bmqqipnq3kom5" path="res://ability_menu.gd" id="1_tnovu"]
 [ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://bars/single_ability_slot.tscn" id="2_lmnnc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmnnc"]
+bg_color = Color(0.468, 0.6257333, 0.65, 1)
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
 [node name="AbilityMenu" type="Control" unique_id=1948310713]
 layout_mode = 3
 anchors_preset = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 5.0
+offset_bottom = 5.0
+focus_mode = 2
 script = ExtResource("1_tnovu")
 
-[node name="AbilityContainer" type="GridContainer" parent="." unique_id=1666929173]
-layout_mode = 0
-offset_right = 240.0
-offset_bottom = 240.0
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1069809080]
+layout_mode = 1
+offset_right = 172.0
+offset_bottom = 44.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lmnnc")
+
+[node name="AbilityContainer" type="GridContainer" parent="PanelContainer" unique_id=1666929173]
+layout_mode = 2
 columns = 4
 
-[node name="SingleAbilitySlot" parent="AbilityContainer" unique_id=1391659758 instance=ExtResource("2_lmnnc")]
+[node name="SingleAbilitySlot" parent="PanelContainer/AbilityContainer" unique_id=1391659758 instance=ExtResource("2_lmnnc")]
 layout_mode = 2
 
-[node name="SingleAbilitySlot2" parent="AbilityContainer" unique_id=2034923091 instance=ExtResource("2_lmnnc")]
+[node name="SingleAbilitySlot2" parent="PanelContainer/AbilityContainer" unique_id=2034923091 instance=ExtResource("2_lmnnc")]
 layout_mode = 2
 
-[node name="SingleAbilitySlot3" parent="AbilityContainer" unique_id=76545163 instance=ExtResource("2_lmnnc")]
+[node name="SingleAbilitySlot3" parent="PanelContainer/AbilityContainer" unique_id=76545163 instance=ExtResource("2_lmnnc")]
 layout_mode = 2
 
-[node name="SingleAbilitySlot4" parent="AbilityContainer" unique_id=1709093251 instance=ExtResource("2_lmnnc")]
+[node name="SingleAbilitySlot4" parent="PanelContainer/AbilityContainer" unique_id=1709093251 instance=ExtResource("2_lmnnc")]
 layout_mode = 2
 
 [node name="Cursor" type="ColorRect" parent="." unique_id=68922560]
