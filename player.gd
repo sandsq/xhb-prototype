@@ -13,8 +13,12 @@ func _ready() -> void:
 		child.slot_hotkey_pressed.connect(_on_hotkey_pressed)
 	for child in xhb.right.get_all_slots():
 		child.slot_hotkey_pressed.connect(_on_hotkey_pressed)
+	for child in xhb.back_left.get_all_slots():
+		child.slot_hotkey_pressed.connect(_on_hotkey_pressed)
+	for child in xhb.back_right.get_all_slots():
+		child.slot_hotkey_pressed.connect(_on_hotkey_pressed)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
 	move_and_slide()

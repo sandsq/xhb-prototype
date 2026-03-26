@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://c2u44c4ltnc6o"]
+
+[ext_resource type="Script" uid="uid://b8ucgvqgh1mvb" path="res://ability_renderer.gd" id="1_atpbq"]
+
+[node name="AbilityRenderer" type="Control" unique_id=602356750]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_atpbq")
+
+[node name="AbilityColor" type="ColorRect" parent="." unique_id=851876372]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = 35.0
+offset_bottom = 35.0
+color = Color(1, 1, 1, 0)

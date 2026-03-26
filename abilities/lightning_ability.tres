@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://bik7xfofobem1"]
+
+[ext_resource type="Script" uid="uid://d0it4fnvvdj2p" path="res://abilities/ability.gd" id="1_rtbrj"]
+[ext_resource type="Resource" uid="uid://4f2odyw5l47u" path="res://abilities/lightning_ability_data.tres" id="1_yxai5"]
+[ext_resource type="Script" uid="uid://cf4pd8gch2nhu" path="res://abilities/lightning_ability_effect.gd" id="2_qv1ur"]
+
+[sub_resource type="Resource" id="Resource_6ob56"]
+script = ExtResource("2_qv1ur")
+metadata/_custom_type_script = "uid://cf4pd8gch2nhu"
+
+[resource]
+script = ExtResource("1_rtbrj")
+ability_data = ExtResource("1_yxai5")
+ability_effect = SubResource("Resource_6ob56")
+metadata/_custom_type_script = "uid://d0it4fnvvdj2p"

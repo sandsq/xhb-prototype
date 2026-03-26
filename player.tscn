@@ -13,10 +13,16 @@ offset_bottom = 40.0
 text = "hello"
 
 [node name="EffectText" type="RichTextLabel" parent="." unique_id=1109800399]
-offset_left = -152.0
-offset_top = 24.0
-offset_right = 160.0
-offset_bottom = 64.0
+offset_left = -160.0
+offset_top = -72.0
+offset_right = 152.0
+offset_bottom = -32.0
+text = "aaa"
+horizontal_alignment = 1
 
 [node name="XHB" parent="." unique_id=944958357 instance=ExtResource("1_4flbx")]
 top_level = true
+offset_left = -264.0
+offset_top = 64.0
+offset_right = -264.0
+offset_bottom = 64.0

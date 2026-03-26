@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://dq2mjsfqau5do"]
 
 [ext_resource type="Script" uid="uid://5e2cqacoh0yg" path="res://bars/single_ability_slot.gd" id="1_15io5"]
+[ext_resource type="PackedScene" uid="uid://c2u44c4ltnc6o" path="res://ability_renderer.tscn" id="2_032rk"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_15io5"]
 
 [node name="SingleAbilitySlot" type="Control" unique_id=1391659758]
+custom_minimum_size = Vector2(40, 40)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -28,11 +30,5 @@ offset_bottom = 57.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AbilityRenderer" type="Node2D" parent="." unique_id=495870885]
-
-[node name="AbilityColor" type="ColorRect" parent="AbilityRenderer" unique_id=1276457009]
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 35.0
-offset_bottom = 35.0
-color = Color(1, 1, 1, 0)
+[node name="AbilityRenderer" parent="." unique_id=382620582 instance=ExtResource("2_032rk")]
+layout_mode = 0

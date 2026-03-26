@@ -4,9 +4,3 @@
 
 [node name="Ability" type="Node2D" unique_id=1464958380]
 script = ExtResource("1_vw4y3")
-
-[node name="AbilityGraphic" type="ColorRect" parent="." unique_id=1791107964]
-offset_left = 5.0
-offset_top = 5.0
-offset_right = 35.0
-offset_bottom = 35.0

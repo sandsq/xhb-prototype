@@ -1,13 +1,15 @@
 extends Control
 
-var upscale: float = 2.0
+var upscale: float = 1.5
 var currently_active
 var action_queue: Array[InputEvent]
 
 @onready var left = $Left
 @onready var right = $Right
+@onready var back_left = $BackLeft
+@onready var back_right = $BackRight
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_released("activate_left"):
 		reset_currently_active_state()
 	elif Input.is_action_just_released("activate_right"):
@@ -22,10 +24,10 @@ func _process(delta: float) -> void:
 		var last_action = action_queue.back()
 		if last_action.is_action("activate_left"):
 			reset_currently_active_state()
-			currently_active = left
+			currently_active = back_right
 		elif last_action.is_action("activate_right"):
 			reset_currently_active_state()
-			currently_active = right
+			currently_active = back_left
 		else:
 			print("action queue somehow contains something besides activate left/right")
 

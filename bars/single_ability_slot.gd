@@ -9,16 +9,16 @@ signal slot_hotkey_pressed(ability)
 var is_enabled: bool = false
 
 @onready var label = $Label
-@onready var ability_color = $AbilityRenderer/AbilityColor
+@onready var ability_renderer = $AbilityRenderer
 
 func _ready() -> void:
 	label.text = hotkey_label
 	if ability != null:
-		ability_color.color = ability.ability_data.color
-		
+		ability_renderer.render(ability)
+	
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# probably don't actually do this here, just store the hotkey with the slot though
 	if is_enabled and Input.is_action_just_pressed(hotkey.action):
 		print("just pressed %s" % hotkey.action)

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Ability" format=3 uid="uid://6n0s7sfqun3i"]
+
+[ext_resource type="Script" uid="uid://d0it4fnvvdj2p" path="res://abilities/ability.gd" id="1_3mme7"]
+[ext_resource type="Resource" uid="uid://blf8a0ph17ny2" path="res://abilities/earth_ability_data.tres" id="1_ainbt"]
+[ext_resource type="Script" uid="uid://bedixm6n5ox04" path="res://abilities/earth_ability_effect.gd" id="2_jjjsn"]
+
+[sub_resource type="Resource" id="Resource_exaqr"]
+script = ExtResource("2_jjjsn")
+metadata/_custom_type_script = "uid://bedixm6n5ox04"
+
+[resource]
+script = ExtResource("1_3mme7")
+ability_data = ExtResource("1_ainbt")
+ability_effect = SubResource("Resource_exaqr")
+metadata/_custom_type_script = "uid://d0it4fnvvdj2p"

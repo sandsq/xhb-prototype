@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://ds4jaspxdokcr" path="res://bars/xhb.gd" id="1_32tct"]
 [ext_resource type="Resource" uid="uid://b38mqvlumgdln" path="res://abilities/fire_ability.tres" id="3_erpuq"]
 [ext_resource type="Resource" uid="uid://c1eepf2babr8a" path="res://abilities/water_ability.tres" id="4_07tuc"]
+[ext_resource type="Resource" uid="uid://6n0s7sfqun3i" path="res://abilities/earth_ability.tres" id="5_mi1a5"]
+[ext_resource type="Resource" uid="uid://bik7xfofobem1" path="res://abilities/lightning_ability.tres" id="6_7rkin"]
 
 [node name="XHB" type="Control" unique_id=944958357]
 layout_mode = 3
@@ -25,5 +27,29 @@ pivot_offset_ratio = Vector2(0, 1)
 [node name="SingleAbilitySlot6" parent="Right" index="5" unique_id=1543123028]
 ability = ExtResource("4_07tuc")
 
+[node name="BackLeft" parent="." unique_id=76240611 instance=ExtResource("1_7rwek")]
+layout_mode = 0
+offset_left = -40.0
+offset_top = 144.0
+offset_right = 208.0
+offset_bottom = 264.0
+pivot_offset_ratio = Vector2(1, 0)
+
+[node name="SingleAbilitySlot" parent="BackLeft" index="0" unique_id=1391659758]
+ability = ExtResource("5_mi1a5")
+
+[node name="BackRight" parent="." unique_id=1029599151 instance=ExtResource("1_7rwek")]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 144.0
+offset_right = 568.0
+offset_bottom = 264.0
+pivot_offset_ratio = Vector2(0, 0)
+
+[node name="SingleAbilitySlot2" parent="BackRight" index="1" unique_id=1770922323]
+ability = ExtResource("6_7rkin")
+
 [editable path="Left"]
 [editable path="Right"]
+[editable path="BackLeft"]
+[editable path="BackRight"]

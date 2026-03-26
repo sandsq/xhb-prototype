@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ce5aitud7owx6" path="res://main.gd" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://iqrvgbqig3kv" path="res://player.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c4n0os7j88p6o" path="res://ability_menu.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=1575291038]
 script = ExtResource("1_ig7tw")
@@ -12,24 +13,26 @@ offset_bottom = 720.0
 color = Color(0.3315, 0.51, 0.51, 1)
 
 [node name="Player" parent="." unique_id=1559910079 instance=ExtResource("2_0xm2m")]
-position = Vector2(608, 184)
+position = Vector2(800, 184)
 
 [node name="XHB" parent="Player" index="2" unique_id=944958357]
-offset_left = 336.0
-offset_top = 520.0
-offset_right = 336.0
-offset_bottom = 520.0
+offset_left = 536.0
+offset_top = 264.0
+offset_right = 536.0
+offset_bottom = 264.0
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1897087129]
-offset_left = 264.0
-offset_top = 112.0
-offset_right = 304.0
-offset_bottom = 152.0
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 104.0
+offset_bottom = 104.0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=464650032]
-offset_left = 1024.0
-offset_top = 512.0
-offset_right = 1064.0
-offset_bottom = 552.0
+offset_left = 1176.0
+offset_top = 600.0
+offset_right = 1216.0
+offset_bottom = 640.0
+
+[node name="AbilityMenu" parent="." unique_id=1948310713 instance=ExtResource("3_h2yge")]
 
 [editable path="Player"]
