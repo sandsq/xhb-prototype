@@ -13,27 +13,6 @@ offset_right = 1280.0
 offset_bottom = 720.0
 color = Color(0.3315, 0.51, 0.51, 1)
 
-[node name="Player" parent="." unique_id=1559910079 instance=ExtResource("2_0xm2m")]
-position = Vector2(800, 184)
-
-[node name="XHB" parent="Player" index="2" unique_id=944958357]
-offset_left = 536.0
-offset_top = 264.0
-offset_right = 536.0
-offset_bottom = 264.0
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1897087129]
-offset_left = 64.0
-offset_top = 64.0
-offset_right = 104.0
-offset_bottom = 104.0
-
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=464650032]
-offset_left = 1176.0
-offset_top = 600.0
-offset_right = 1216.0
-offset_bottom = 640.0
-
 [node name="AbilityMenu" parent="." unique_id=1948310713 instance=ExtResource("3_h2yge")]
 offset_left = 64.0
 offset_top = 216.0
@@ -45,5 +24,23 @@ offset_left = 24.0
 offset_top = 512.0
 offset_right = 144.0
 offset_bottom = 576.0
+
+[node name="ControlState" type="RichTextLabel" parent="." unique_id=688233482]
+offset_left = 328.0
+offset_top = 8.0
+offset_right = 952.0
+offset_bottom = 88.0
+theme_override_font_sizes/normal_font_size = 48
+text = "Hello"
+horizontal_alignment = 1
+
+[node name="Player" parent="." unique_id=1559910079 instance=ExtResource("2_0xm2m")]
+position = Vector2(800, 184)
+
+[node name="XHB" parent="Player" index="0" unique_id=944958357]
+offset_left = 536.0
+offset_top = 264.0
+offset_right = 536.0
+offset_bottom = 264.0
 
 [editable path="Player"]

@@ -11,7 +11,7 @@ var control_state: Globals.ControlState:
 				background.color = Color("118855")
 			Globals.ControlState.ABILITY_ASSIGNMENT:
 				self.grab_focus()
-				background.color = Color("11ff88")
+				background.color = Color("9E8850")
 			_:
 				self.release_focus()
 				background.color = Color("ffffff", 0)
@@ -42,6 +42,7 @@ func _gui_input(event: InputEvent) -> void:
 		if action_queue.size() >= 2:
 			action_queue = action_queue.slice(-2, action_queue.size())
 
+## display the proper xhb halves based on which trigger is held
 func process_bar_input():
 	if Input.is_action_just_released("activate_left"):
 		reset_currently_active_state()
@@ -51,7 +52,8 @@ func process_bar_input():
 	if Input.is_action_pressed("activate_left") \
 	and Input.is_action_pressed("activate_right"):
 		if action_queue.size() < 2:
-			print("action queue size is %s which sholudn't be possible" % action_queue.size())
+			# possible if triggers are held before entering xhb control mode
+			return
 
 		var last_action = action_queue.back()
 		if last_action.is_action("activate_left"):
@@ -77,7 +79,9 @@ func process_bar_input():
 
 
 func reset_currently_active_state():
-	currently_active.scale = Vector2(1.0, 1.0)
-	currently_active.set_state(false)
-	currently_active = null
-	background.scale = Vector2(1.0, 1.0)
+	if currently_active != null:
+		currently_active.scale = Vector2(1.0, 1.0)
+		currently_active.set_state(false)
+		currently_active = null
+	if background != null:
+		background.scale = Vector2(1.0, 1.0)

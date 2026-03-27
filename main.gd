@@ -5,9 +5,17 @@ var control_state = Globals.ControlState.ABILITY_MENU:
 		ability_menu.control_state = value
 		player.control_state = value
 		control_state = value
+		match value:
+			Globals.ControlState.ABILITY_MENU:
+				control_state_text.text = "Ability Menu"
+			Globals.ControlState.ABILITY_ASSIGNMENT:
+				control_state_text.text = "Ability Assignment"
+			Globals.ControlState.PLAYER_CONTROL:
+				control_state_text.text = "Player Control"
 
 @onready var player = $Player
 @onready var ability_menu = $AbilityMenu
+@onready var control_state_text = $ControlState
 
 func _ready() -> void:
 	player.ability_assignment_finished.connect(_on_ability_assignment_finished)
@@ -19,6 +27,9 @@ func _process(_delta: float) -> void:
 		control_state = Globals.ControlState.ABILITY_MENU
 	if Input.is_action_just_pressed("focus_player"):
 		control_state = Globals.ControlState.PLAYER_CONTROL
+	if Input.is_action_just_pressed("ui_cancel"):
+		if control_state == Globals.ControlState.ABILITY_ASSIGNMENT:
+			control_state = Globals.ControlState.ABILITY_MENU
 
 func _on_ability_clicked(ability: Ability):
 	if ability != null:

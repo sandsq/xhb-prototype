@@ -24,7 +24,6 @@ var control_state: Globals.ControlState:
 				stylebox.bg_color = Color("ffffff", 0)
 		control_state = value
 
-
 @onready var cursor = $Cursor
 @onready var ability_container = $PanelContainer/AbilityContainer
 @onready var panel_container = $PanelContainer
