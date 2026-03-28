@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c4n0os7j88p6o"]
 
 [ext_resource type="Script" uid="uid://bmqqipnq3kom5" path="res://ability_menu.gd" id="1_tnovu"]
-[ext_resource type="PackedScene" uid="uid://dq2mjsfqau5do" path="res://bars/single_ability_slot.tscn" id="2_lmnnc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmnnc"]
 bg_color = Color(0.468, 0.6257333, 0.65, 1)
@@ -22,25 +21,13 @@ script = ExtResource("1_tnovu")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1069809080]
 layout_mode = 1
-offset_right = 172.0
-offset_bottom = 44.0
+offset_right = 40.0
+offset_bottom = 40.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_lmnnc")
 
 [node name="AbilityContainer" type="GridContainer" parent="PanelContainer" unique_id=1666929173]
 layout_mode = 2
 columns = 4
-
-[node name="SingleAbilitySlot" parent="PanelContainer/AbilityContainer" unique_id=1391659758 instance=ExtResource("2_lmnnc")]
-layout_mode = 2
-
-[node name="SingleAbilitySlot2" parent="PanelContainer/AbilityContainer" unique_id=2034923091 instance=ExtResource("2_lmnnc")]
-layout_mode = 2
-
-[node name="SingleAbilitySlot3" parent="PanelContainer/AbilityContainer" unique_id=76545163 instance=ExtResource("2_lmnnc")]
-layout_mode = 2
-
-[node name="SingleAbilitySlot4" parent="PanelContainer/AbilityContainer" unique_id=1709093251 instance=ExtResource("2_lmnnc")]
-layout_mode = 2
 
 [node name="Cursor" type="ColorRect" parent="." unique_id=68922560]
 layout_mode = 0
